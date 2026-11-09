@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://www.megaparc.md
+Sitemap: https://www.megaparc.md/sitemap.xml
