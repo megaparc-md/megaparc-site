@@ -336,4 +336,25 @@
 <xhtml:link rel="alternate" hreflang="en" href="https://www.megaparc.md/en/projects/drochia/" />
 <xhtml:link rel="alternate" hreflang="x-default" href="https://www.megaparc.md/projects/drochia/" />
 </url>
+<url>
+<loc>https://www.megaparc.md/leasing/moscova-20/pack/</loc>
+<xhtml:link rel="alternate" hreflang="ro-MD" href="https://www.megaparc.md/leasing/moscova-20/pack/" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://www.megaparc.md/ru/leasing/moscova-20/pack/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://www.megaparc.md/en/leasing/moscova-20/pack/" />
+<xhtml:link rel="alternate" hreflang="x-default" href="https://www.megaparc.md/leasing/moscova-20/pack/" />
+</url>
+<url>
+<loc>https://www.megaparc.md/ru/leasing/moscova-20/pack/</loc>
+<xhtml:link rel="alternate" hreflang="ro-MD" href="https://www.megaparc.md/leasing/moscova-20/pack/" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://www.megaparc.md/ru/leasing/moscova-20/pack/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://www.megaparc.md/en/leasing/moscova-20/pack/" />
+<xhtml:link rel="alternate" hreflang="x-default" href="https://www.megaparc.md/leasing/moscova-20/pack/" />
+</url>
+<url>
+<loc>https://www.megaparc.md/en/leasing/moscova-20/pack/</loc>
+<xhtml:link rel="alternate" hreflang="ro-MD" href="https://www.megaparc.md/leasing/moscova-20/pack/" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://www.megaparc.md/ru/leasing/moscova-20/pack/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://www.megaparc.md/en/leasing/moscova-20/pack/" />
+<xhtml:link rel="alternate" hreflang="x-default" href="https://www.megaparc.md/leasing/moscova-20/pack/" />
+</url>
 </urlset>
