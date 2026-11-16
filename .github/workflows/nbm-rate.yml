@@ -64,9 +64,10 @@ jobs:
         run: |
           for i in $(seq 1 60); do
             live=$(curl -s "https://www.megaparc.md/data/nbm-eur-mdl.json?run=${{ github.run_id }}-$i" || true)
-            got=$(printf '%s' "$live" | node -e 'let d="";process.stdin.on("data",c=>d+=c).on("end",()=>{try{const r=JSON.parse(d);console.log(`${r.date} ${r.rate} ${r.status}`)}catch{console.log("none")}})')
+            got=$(printf '%s' "$live" | node -e 'let d="";process.stdin.on("data",c=>d+=c).on("end",()=>{try{const r=JSON.parse(d);console.log(`${r.date} ${r.rate} ${r.status} ${r.fetchedAt}`)}catch{console.log("none")}})')
             echo "live: $got"
-            [ "$got" = "${{ steps.rate.outputs.date }} ${{ steps.rate.outputs.rate }} ${{ steps.rate.outputs.status }}" ] && exit 0
+            # the exact record this run wrote (its fetch time included) — a manual confirmation of the same rate is checked as well
+            [ "$got" = "${{ steps.rate.outputs.date }} ${{ steps.rate.outputs.rate }} ${{ steps.rate.outputs.status }} ${{ steps.rate.outputs.fetched }}" ] && exit 0
             sleep 15
           done
           echo "the published record did not reach www.megaparc.md in 15 minutes"; exit 1

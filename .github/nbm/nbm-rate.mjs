@@ -39,7 +39,7 @@ async function update() {
   const r = result.record;
   const summary = `NBM RATE: ${result.outcome}${result.changed ? (process.argv.includes("--dry-run") ? " (would be written — dry run)" : " (written)") : ""} — ${r ? `1 EUR = ${r.rate} MDL · NBM ${nbmDateOf(r.date)} · status ${r.status}` : "no record"}`;
   console.log(summary);
-  if (process.env.GITHUB_OUTPUT) appendFileSync(process.env.GITHUB_OUTPUT, `changed=${result.changed}\noutcome=${result.outcome}\ndate=${r?.date ?? ""}\nrate=${r?.rate ?? ""}\nstatus=${r?.status ?? ""}\n`);
+  if (process.env.GITHUB_OUTPUT) appendFileSync(process.env.GITHUB_OUTPUT, `changed=${result.changed}\noutcome=${result.outcome}\ndate=${r?.date ?? ""}\nrate=${r?.rate ?? ""}\nstatus=${r?.status ?? ""}\nfetched=${r?.fetchedAt ?? ""}\n`);
   if (process.env.GITHUB_STEP_SUMMARY) appendFileSync(process.env.GITHUB_STEP_SUMMARY, `${summary}\n\n${result.log.map((l) => `- ${l}`).join("\n")}\n`);
   if (result.outcome === "unavailable" && process.env.GITHUB_ACTIONS) console.log(`::warning::NBM unreachable — the last valid rate (${r?.date}) stays`);
   process.exitCode = result.exitCode;
