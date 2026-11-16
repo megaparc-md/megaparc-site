@@ -1,0 +1,72 @@
+# NBM EUR / MDL — the official rate of the two MEGAPARC calculators (OWNER «AUTOMATIC NBM FX», 2026-11-16).
+# Lives in the production repository megaparc-md/megaparc-site; the source is megaparc-md/megaparc-web (deploy/site-repo/, copied into
+# every production artifact by scripts/package-production.mjs together with .github/nbm/nbm-rate.mjs + nbm-rate-core.mjs).
+#
+# What it does: reads the official XML of the National Bank of Moldova for today's date in Europe/Chisinau (two exports, EN and RO, must
+# agree), validates it and updates ONE file — data/nbm-eur-mdl.json — on top of the latest main (never a force push, never another file),
+# asks GitHub Pages to publish and checks the published file on www.megaparc.md. No site rebuild. The calculators read the file when a
+# page loads. Not published yet → nothing changes (the page names the date of the rate it shows); NBM unreachable → the last valid rate
+# stays with the status «unavailable»; an answer that is not a valid official rate → not accepted, the run fails.
+#
+# When: several checks a day (cron is UTC; Chișinău is UTC+2 in winter, UTC+3 in summer) — just after midnight in Chișinău for the new
+# date, then every three hours as retries; plus a manual run (Actions → «NBM rate» → Run workflow).
+name: NBM rate
+
+on:
+  schedule:
+    - cron: "10 22 * * *"         # 00:10 Chișinău (winter) · 01:10 (summer)
+    - cron: "10 4,7,10,13 * * *"  # 06:10 · 09:10 · 12:10 · 15:10 Chișinău (winter); one hour later in summer
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: nbm-rate
+  cancel-in-progress: false
+
+jobs:
+  rate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Read the official NBM rate and update the record
+        id: rate
+        # a manual run confirms today's rate against the NBM and writes the time of the confirmation (the full path: commit, Pages, live check)
+        run: node .github/nbm/nbm-rate.mjs --file data/nbm-eur-mdl.json ${{ github.event_name == 'workflow_dispatch' && '--refresh' || '' }}
+      - name: Commit only the rate file on top of the latest main (never a force push)
+        if: steps.rate.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/nbm-eur-mdl.json
+          test "$(git diff --cached --name-only)" = "data/nbm-eur-mdl.json" || { echo "only the rate file may change"; exit 1; }
+          git commit -q -m "data: NBM EUR/MDL ${{ steps.rate.outputs.date }} = ${{ steps.rate.outputs.rate }} (${{ steps.rate.outputs.status }})"
+          for attempt in 1 2 3; do
+            git push origin HEAD:main && exit 0
+            git pull --rebase origin main || { git rebase --abort; echo "main changed the rate file too — nothing pushed"; exit 1; }
+          done
+          exit 1
+      - name: Ask GitHub Pages to publish
+        if: steps.rate.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" --silent || echo "Pages build request not accepted — the push itself triggers the build"
+      - name: Live check — the published record on www.megaparc.md
+        if: steps.rate.outputs.changed == 'true'
+        run: |
+          for i in $(seq 1 60); do
+            live=$(curl -s "https://www.megaparc.md/data/nbm-eur-mdl.json?run=${{ github.run_id }}-$i" || true)
+            got=$(printf '%s' "$live" | node -e 'let d="";process.stdin.on("data",c=>d+=c).on("end",()=>{try{const r=JSON.parse(d);console.log(`${r.date} ${r.rate} ${r.status}`)}catch{console.log("none")}})')
+            echo "live: $got"
+            [ "$got" = "${{ steps.rate.outputs.date }} ${{ steps.rate.outputs.rate }} ${{ steps.rate.outputs.status }}" ] && exit 0
+            sleep 15
+          done
+          echo "the published record did not reach www.megaparc.md in 15 minutes"; exit 1
