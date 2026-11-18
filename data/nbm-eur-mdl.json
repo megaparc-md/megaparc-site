@@ -2,12 +2,12 @@
   "schema": "megaparc-nbm-rate/1",
   "base": "EUR",
   "quote": "MDL",
-  "rate": 20.1666,
-  "date": "2026-11-17",
-  "source": "https://www.bnm.md/en/official_exchange_rates?get_xml=1&date=17.11.2026",
+  "rate": 20.1538,
+  "date": "2026-11-18",
+  "source": "https://www.bnm.md/en/official_exchange_rates?get_xml=1&date=18.11.2026",
   "publisher": "Banca Națională a Moldovei (NBM)",
-  "fetchedAt": "2026-11-16T22:50:25.814Z",
+  "fetchedAt": "2026-11-18T03:41:20.944Z",
   "status": "ok",
-  "statusAt": "2026-11-16T22:50:25.814Z",
+  "statusAt": "2026-11-18T03:41:20.944Z",
   "note": null
 }
