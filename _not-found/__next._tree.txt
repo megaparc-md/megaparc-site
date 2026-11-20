@@ -1,6 +1,7 @@
-:HL["/_next/static/chunks/3rb7pffhwedt7.css","style"]
+:HL["/_next/static/chunks/2nlw0pn5nsaax.css","style"]
+:HL["/_next/static/chunks/17oa0w6mdpue9.css","style"]
 :HL["/fonts/manrope-4.505/Manrope-300.woff2","font",{"crossOrigin":"anonymous","type":"font/woff2"}]
 :HL["/fonts/manrope-4.505/Manrope-400.woff2","font",{"crossOrigin":"anonymous","type":"font/woff2"}]
 :HL["/fonts/manrope-4.505/Manrope-600.woff2","font",{"crossOrigin":"anonymous","type":"font/woff2"}]
 :HL["/fonts/manrope-4.505/Manrope-700.woff2","font",{"crossOrigin":"anonymous","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"x2HigZwXHDwhuxZjn-o0Z"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"sL9kQv061NCS2Y9hcC2v5"}
