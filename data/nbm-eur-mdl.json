@@ -3,11 +3,11 @@
   "base": "EUR",
   "quote": "MDL",
   "rate": 20.1267,
-  "date": "2026-11-21",
-  "source": "https://www.bnm.md/en/official_exchange_rates?get_xml=1&date=21.11.2026",
+  "date": "2026-11-22",
+  "source": "https://www.bnm.md/en/official_exchange_rates?get_xml=1&date=22.11.2026",
   "publisher": "Banca Națională a Moldovei (NBM)",
-  "fetchedAt": "2026-11-21T03:10:48.565Z",
+  "fetchedAt": "2026-11-22T02:10:28.916Z",
   "status": "ok",
-  "statusAt": "2026-11-21T03:10:48.565Z",
+  "statusAt": "2026-11-22T02:10:28.916Z",
   "note": null
 }
