@@ -10,4 +10,4 @@
 :HL["/fonts/manrope-4.505/Manrope-600.woff2","font",{"crossOrigin":"anonymous","type":"font/woff2"}]
 :HL["/fonts/manrope-4.505/Manrope-700.woff2","font",{"crossOrigin":"anonymous","type":"font/woff2"}]
 :HL["/brand/megaparc-logo-on-dark.svg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"(ro)","param":null,"prefetchHints":4208,"slots":{"children":{"name":"about","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"yuvBV_5aFaw__ZlO06GLf"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"(ro)","param":null,"prefetchHints":4208,"slots":{"children":{"name":"about","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"-KJqDdfyNGyQmXdGTI9PK"}
