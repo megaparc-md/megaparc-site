@@ -1,4 +1,4 @@
-:HL["/_next/static/chunks/2nlw0pn5nsaax.css","style"]
+:HL["/_next/static/chunks/2_1yxjmlbvx48.css","style"]
 :HL["/_next/static/chunks/43elbyvxzbjky.css","style"]
 :HL["/_next/static/chunks/1n0mpq8_kot3f.css","style"]
 :HL["/_next/static/chunks/0v1j48g3260s7.css","style"]
@@ -10,4 +10,4 @@
 :HL["/fonts/manrope-4.505/Manrope-600.woff2","font",{"crossOrigin":"anonymous","type":"font/woff2"}]
 :HL["/fonts/manrope-4.505/Manrope-700.woff2","font",{"crossOrigin":"anonymous","type":"font/woff2"}]
 :HL["/brand/megaparc-logo-on-dark.svg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"ru","param":null,"prefetchHints":4208,"slots":{"children":{"name":"contact","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"zWckiZwSyRvylexGoMeWK"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"ru","param":null,"prefetchHints":4208,"slots":{"children":{"name":"contact","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"s8cLI9vp_xM1dFXFNzBHi"}
