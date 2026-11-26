@@ -358,6 +358,27 @@
 <xhtml:link rel="alternate" hreflang="x-default" href="https://www.megaparc.md/leasing/moscova-20/pack/" />
 </url>
 <url>
+<loc>https://www.megaparc.md/leasing/moscova-20/tour/</loc>
+<xhtml:link rel="alternate" hreflang="ro-MD" href="https://www.megaparc.md/leasing/moscova-20/tour/" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://www.megaparc.md/ru/leasing/moscova-20/tour/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://www.megaparc.md/en/leasing/moscova-20/tour/" />
+<xhtml:link rel="alternate" hreflang="x-default" href="https://www.megaparc.md/leasing/moscova-20/tour/" />
+</url>
+<url>
+<loc>https://www.megaparc.md/ru/leasing/moscova-20/tour/</loc>
+<xhtml:link rel="alternate" hreflang="ro-MD" href="https://www.megaparc.md/leasing/moscova-20/tour/" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://www.megaparc.md/ru/leasing/moscova-20/tour/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://www.megaparc.md/en/leasing/moscova-20/tour/" />
+<xhtml:link rel="alternate" hreflang="x-default" href="https://www.megaparc.md/leasing/moscova-20/tour/" />
+</url>
+<url>
+<loc>https://www.megaparc.md/en/leasing/moscova-20/tour/</loc>
+<xhtml:link rel="alternate" hreflang="ro-MD" href="https://www.megaparc.md/leasing/moscova-20/tour/" />
+<xhtml:link rel="alternate" hreflang="ru" href="https://www.megaparc.md/ru/leasing/moscova-20/tour/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://www.megaparc.md/en/leasing/moscova-20/tour/" />
+<xhtml:link rel="alternate" hreflang="x-default" href="https://www.megaparc.md/leasing/moscova-20/tour/" />
+</url>
+<url>
 <loc>https://www.megaparc.md/producer-economics/</loc>
 <xhtml:link rel="alternate" hreflang="ro-MD" href="https://www.megaparc.md/producer-economics/" />
 <xhtml:link rel="alternate" hreflang="ru" href="https://www.megaparc.md/ru/producer-economics/" />
