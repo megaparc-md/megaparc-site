@@ -1,5 +1,6 @@
 User-Agent: *
 Allow: /
+Disallow: /Moscova20_3D_tour_site/
 
 Host: https://www.megaparc.md
 Sitemap: https://www.megaparc.md/sitemap.xml
